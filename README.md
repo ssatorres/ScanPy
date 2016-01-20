@@ -3,15 +3,22 @@ O scan é feito com a ajuda do Nmap.
 
 Install:
 $ git clone https://github.com/DevIgor/ScanPy.git 
+
 $ cd ScanPy
+
 $ ./install.sh
 
 
 
 Agradecimentos:
-  Matheus Fidelis
-  Pedro Souza
-  Gabriel de Moura Dutra
-  Pessoal do Python Coding grupo do Telegram.
+  
+     Matheus Fidelis
+  
+     Pedro Souza
+  
+     Gabriel de Moura Dutra
+  
+     Pessoal do Python Coding grupo do Telegram.
+  
 
 Grupo Python Coding: https://goo.gl/Y6KOZX
