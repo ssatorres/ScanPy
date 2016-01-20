@@ -46,4 +46,5 @@ def menu():
     ## INICIANDO SCANNER ##
     scanner = subprocess.call(nmap + ip + log, shell=True,)
 
+    print colored("*/*/*/*/*/*/*/FINALIZADO/*/*/*/*/*/*/*/*/*", 'red', attrs=['bold'])
 menu()
