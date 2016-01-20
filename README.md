@@ -2,7 +2,7 @@ Simples Scan em Python.
 O scan é feito com a ajuda do Nmap.
 
 Install:
-$ git clone 
+$ git clone https://github.com/DevIgor/ScanPy.git 
 $ cd ScanPy
 $ ./install.sh
 
