@@ -33,7 +33,7 @@ def scan(ip):
 def menu():
     ip = ''
     nmap = 'sudo nmap -sC -sV -Pn '
-    log = ' | tee Log_Scan.%s.html' % (data)
+    log = ' >> Log_Scan.%s.log' % (data)
     ##  FAZENDO PARSE DOS ARGUMENTOS ##
     parse = argparse.ArgumentParser(description='ScanPy', add_help=False)
     parse.add_argument('-h', '--help', action=uso())
