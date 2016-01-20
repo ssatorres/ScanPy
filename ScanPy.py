@@ -10,6 +10,7 @@ import subprocess
 
 ## VARIAVEIS ##
 data = "%s" % (time.strftime("%Y_%m_%d"))
+hora = "%s" % (time.strftime("%H:%M"))
 ## INICIANDO PROGRAMA ##
 def uso():
     print colored("""
@@ -33,7 +34,7 @@ def scan(ip):
 def menu():
     ip = ''
     nmap = 'sudo nmap -sC -sV -Pn '
-    log = ' >> Log_Scan.%s.log' % (data)
+    log = ' >> Logs/Log_Scan.%s-%s.log' % (data, hora)
     ##  FAZENDO PARSE DOS ARGUMENTOS ##
     parse = argparse.ArgumentParser(description='ScanPy', add_help=False)
     parse.add_argument('-h', '--help', action=uso())
@@ -45,6 +46,8 @@ def menu():
 
     ## INICIANDO SCANNER ##
     scanner = subprocess.call(nmap + ip + log, shell=True,)
-
-    print colored("*/*/*/*/*/*/*/FINALIZADO/*/*/*/*/*/*/*/*/*", 'red', attrs=['bold'])
+    print colored("====================================================================", 'blue', attrs=['bold'])
+    print colored("[+] LOG SALVO EM%s", 'blue', attrs=['bold']) % log
+    print colored("====================================================================\n", 'blue', attrs=['bold'])
+    print colored("*/*/*/*/*/*/*/FINALIZADO/*/*/*/*/*/*/*/*/*\n", 'red', attrs=['bold'])
 menu()
