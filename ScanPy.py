@@ -6,10 +6,10 @@ import argparse
 from termcolor import colored
 import os
 import time
+import subprocess
 
 ## VARIAVEIS ##
-data = "%s" % (time.strftime('%Y_%m_%d'))
-
+data = "%s" % (time.strftime("%Y_%m_%d"))
 ## INICIANDO PROGRAMA ##
 def uso():
     print colored("""
@@ -29,9 +29,11 @@ def scan(ip):
     print colored("=================[*Iniciando Scan*]=================", 'yellow', attrs=['bold'])
     print colored("Iniciando Teste no Ip: " + ip, 'yellow', attrs=['bold'])
     print
+
 def menu():
     ip = ''
-
+    nmap = 'sudo nmap -sC -sV -Pn '
+    log = ' | tee Log_Scan.%s.html' % (data)
     ##  FAZENDO PARSE DOS ARGUMENTOS ##
     parse = argparse.ArgumentParser(description='ScanPy', add_help=False)
     parse.add_argument('-h', '--help', action=uso())
@@ -42,6 +44,6 @@ def menu():
     scan(ip)
 
     ## INICIANDO SCANNER ##
-    nmap = os.system('sudo nmap -sC -sV -O ' + ip)
-    
+    scanner = subprocess.call(nmap + ip + log, shell=True,)
+
 menu()
