@@ -34,10 +34,19 @@ def scan(ip, url):
 def menu():
     ip = ''
     url = ''
+
+    ## VARIÁVEIS DE COMANDOS ##
+    ## NMAP ##
     nmap = 'sudo nmap -sC -sV -Pn '
+    ## WPSCAN ##
     wps = 'sudo wpscan --url '
     param = ' --enumerate u '
+    ## Uniscan ##
+    unis  = 'sudo uniscan -u  '
+    unisp = ' -qweds'
+    ## LOG ##
     log = ' >> Logs/Log_Scan.%s-%s.log' % (data, hora)
+
     ##  FAZENDO PARSE DOS ARGUMENTOS ##
     parse = argparse.ArgumentParser(description='ScanPy', add_help=False)
     parse.add_argument('-h', '--help', action=uso())
@@ -51,7 +60,8 @@ def menu():
 
     ## INICIANDO SCANNER ##
     scanner = subprocess.call(nmap + ip + log, shell=True,)
-    uniscan = subprocess.call(wps + url + param + log, shell=True)
+    wpscan  = subprocess.call(wps + url + param + log, shell=True)
+    uniscan = subprocess.call(unis + url + unisp + log, shell=True)
     print colored("====================================================================", 'blue', attrs=['bold'])
     print colored("[+] LOG SALVO EM%s", 'blue', attrs=['bold']) % log
     print colored("====================================================================\n", 'blue', attrs=['bold'])
