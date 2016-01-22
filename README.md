@@ -3,7 +3,11 @@ Tool para automatizar auditoria em aplicações web.
 Ferramentas auxiliares:
 - NMAP
 - WPSCAN
-- UNISCAN
+- UNISCA
+
+ATENÇÂO:
+
+    FUNCIONA APENAS EM DISTROS BASEADAS NO DEBIAN E NO UBUNTU, QUE UTILIZEM O APT-GET COMO GERENCIADOR DE PACOTES.
 
 Install:
 
