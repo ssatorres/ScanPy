@@ -13,7 +13,7 @@ Install:
     $ ./install.sh
 
 Uso:
-  ./ScanPy.py --ip [IP DO SITE OU IP DA MÁQUINA] -url [URL DO ALVO]
+    ./ScanPy.py --ip [IP DO SITE OU IP DA MÁQUINA] -url [URL DO ALVO]
 
 Agradecimentos:
   
