@@ -11,7 +11,7 @@ Install:
 
     $ cd ScanPy
 
-    $ ./install.sh
+    $ sudo ./install.sh
 
 Uso:
 
