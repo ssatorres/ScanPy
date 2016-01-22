@@ -7,6 +7,7 @@ from termcolor import colored
 import time
 import subprocess
 
+
 ## VARIAVEIS ##
 data = "%s" % (time.strftime("%d_%m_%Y"))
 hora = "%s" % (time.strftime("%H:%M"))
